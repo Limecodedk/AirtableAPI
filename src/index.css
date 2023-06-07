@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap');
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  padding: 0 30px;
+  z-index: 99;
+
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+  margin-bottom: 15px;
+  min-width: max-content;
+}
+
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  padding: 15px 0;
+}
+
+
+.marker-icon {
+  background-color: none;
+}
+
+
+#LicensPlateNumber {
+
+  text-transform: uppercase;
+}
+
+
+.nummerpladeImg {
+  display: flex;
+  margin: 0 auto;
+  background-image: url('/public/standard_nummerplader.jpg');
+  background-size: contain;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.nummerpladeImg p {
+  font-family: Geologica;
+  font-size: 4.5rem;
+  color: black;
+  margin-left: 1em;
+}
+
+.leasing {
+  color: red;
+}
