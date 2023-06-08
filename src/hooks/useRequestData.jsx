@@ -9,14 +9,31 @@ const useRequestData = () => {
   const [isLoading, setIsLoading] = useState()
   const [error, setError] = useState()
 
-  const makeRequest = async (url, headers = null, params = null) => {
+  const makeRequest = async (url, headers = null, params = null, method = "GET", bodydata = null) => {
 
     setIsLoading(true); // Der loades = afventer svar fra api
 
     try {
-      let response = await axios.get(url, { headers: headers, params: params })
+      let response
+
+      if (method === "GET") {
+        response = await axios.get(url, { headers: headers, params: params })
+
+      } else if (method === "POST") {
+        response = await axios.post(url, bodydata, { headers: headers, params: params })
+
+      }
+
+
       setData(response.data)
       setError()
+
+
+
+
+
+
+
 
     } catch (error) {
 
