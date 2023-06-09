@@ -22,30 +22,27 @@ const useRequestData = () => {
       } else if (method === "POST") {
         response = await axios.post(url, bodydata, { headers: headers, params: params })
 
-      }
+      } else if (method === "DELETE") {
+        response = await axios.delete(url, { headers: headers, params: params })
 
+      } else if (method === "PATCH") {
+        response = await axios.patch(url, bodydata, { headers: headers, params: params })
+
+      } /* else {
+        throw new Error('Get post put patch delete was expected!')
+      } */
 
       setData(response.data)
       setError()
 
-
-
-
-
-
-
-
     } catch (error) {
-
-      setError("Der er opstået en fejl:" + error)
-
+      console.log(error)
+      setError("Der er opstået en fejl:" + error.message)
 
     } finally {
       setIsLoading(false)
     }
-
   }
-
 
   return (
     { data, isLoading, error, makeRequest }

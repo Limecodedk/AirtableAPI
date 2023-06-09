@@ -7,6 +7,7 @@ const NavbarAdmin = () => {
       <ul>
         <li><NavLink to="/admin">ADMINHome</NavLink></li>
         <li><NavLink to="/admin/createitems">Create Items</NavLink></li>
+        <li><NavLink to="/admin/adminitems">Edit Items</NavLink></li>
         <li><NavLink to="/">Public</NavLink></li>
       </ul>
     </nav>

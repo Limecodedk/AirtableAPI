@@ -34,11 +34,18 @@ const BuyItems = () => {
                 <th>Produkt:</th>
                 <th>Antal:</th>
                 <th>Note:</th>
+                <th>Butik</th>
               </tr>
               <tr>
                 <td>{s.fields.Item}</td>
                 <td>{s.fields.Amount}</td>
                 <td>{s.fields.Note}</td>
+                <td>{s.fields.shopname}</td>
+
+                {
+                  s.fields.URL && <td ><img src={s.fields.URL} alt="" width={'150px'} height={'100px'} /></td>
+                }
+
               </tr>
             </table>
           </article>

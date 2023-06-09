@@ -10,6 +10,8 @@ import HomeAdmin from './views/admin/HomeAdmin'
 import NotFound from './views/NotFound';
 import BuyItems from './views/ShoppingList/BuyItems'
 import CreateItems from './views/admin/ShoppingList/CreateItems';
+import AdminItems from './views/admin/ShoppingList/AdminItems';
+import EditItem from './views/admin/ShoppingList/EditItem';
 
 
 
@@ -32,6 +34,8 @@ function App() {
         <Route path='/admin' element={<LayoutAdmin />}>
           <Route index element={<HomeAdmin />} />
           <Route path='/admin/createitems' element={<CreateItems />} />
+          <Route path='/admin/adminitems' element={<AdminItems />} />
+          <Route path='/admin/edititems/:id' element={<EditItem />} />
           <Route path='*' element={<NotFound />} />
         </Route>
 
